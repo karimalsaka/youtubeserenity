@@ -1,4 +1,4 @@
-# YouTube Serenity
+# Serenity — YouTube without the noise
 
 A Firefox/Zen browser extension that strips YouTube down to what matters: your subscriptions and search. No algorithmic recommendations, no Shorts, no ads.
 

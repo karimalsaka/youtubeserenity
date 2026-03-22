@@ -66,7 +66,7 @@ ytd-banner-promo-renderer {
 }
 
 /* === GENERAL: hide recommendation junk sitewide === */
-ytd-browse yt-chip-cloud-renderer,
+ytd-browse[page-subtype="home"] yt-chip-cloud-renderer,
 ytd-feed-nudge-renderer,
 ytd-merch-shelf-renderer,
 .ytp-ce-element,

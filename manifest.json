@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Serenity",
+  "version": "2.0.0",
+  "description": "Redirect YouTube to subscriptions and remove Shorts and recommendation surfaces.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "action": {
+    "default_title": "YouTube Serenity"
+  },
+  "host_permissions": [
+    "*://youtube.com/*",
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://youtube.com/*",
+        "*://www.youtube.com/*",
+        "*://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-serenity@karimalsaka"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/* ============================================================
+   YouTube Serenity — CSS
+   Removes algorithmic recommendations, Shorts, and distractions.
+   ============================================================ */
+
+/* === REDIRECTED HOME PAGE: hide feed in case it flashes === */
+ytd-browse[page-subtype="home"] #primary {
+  display: none !important;
+}
+
+/* === SIDEBAR: force collapsed (mini) mode === */
+ytd-guide-renderer {
+  display: none !important;
+}
+ytd-mini-guide-renderer {
+  display: flex !important;
+}
+/* Hide the drawer that opens when hamburger is clicked */
+tp-yt-app-drawer#guide,
+app-drawer#guide {
+  display: none !important;
+}
+/* Hide the hamburger menu button since it does nothing now */
+#guide-button {
+  display: none !important;
+}
+
+/* Mini sidebar: hide Home (1st) and Shorts (2nd) */
+ytd-mini-guide-renderer ytd-mini-guide-entry-renderer:nth-child(1),
+ytd-mini-guide-renderer ytd-mini-guide-entry-renderer:nth-child(2) {
+  display: none !important;
+}
+
+/* === WATCH PAGE: hide suggestions sidebar === */
+ytd-watch-next-secondary-results-renderer,
+ytd-watch-flexy #secondary,
+#related,
+ytd-compact-video-renderer,
+ytd-compact-radio-renderer,
+ytd-compact-playlist-renderer {
+  display: none !important;
+}
+
+/* Comfortable video + comments width */
+ytd-watch-flexy:not([theater]):not([fullscreen]) #columns {
+  max-width: 1800px !important;
+  margin: 0 auto !important;
+  padding: 0 12px !important;
+}
+
+/* === SHORTS: hide everywhere including search === */
+ytd-reel-shelf-renderer,
+grid-shelf-view-model,
+ytm-shorts-lockup-view-model,
+ytm-shorts-lockup-view-model-v2 {
+  display: none !important;
+}
+
+/* === GENERAL: hide recommendation junk sitewide === */
+ytd-browse yt-chip-cloud-renderer,
+ytd-feed-nudge-renderer,
+ytd-merch-shelf-renderer,
+.ytp-ce-element,
+.ytp-ce-covering-overlay,
+.ytp-endscreen-content,
+.ytp-suggestion-set,
+.ytp-videowall-still,
+.ytp-pause-overlay-container,
+.ytp-cards-teaser,
+.ytp-paid-content-overlay {
+  display: none !important;
+}

@@ -56,6 +56,15 @@ ytm-shorts-lockup-view-model-v2 {
   display: none !important;
 }
 
+/* === ADS: hide sponsored/promoted content in search === */
+ytd-ad-slot-renderer,
+ytd-search-pyv-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-banner-promo-renderer {
+  display: none !important;
+}
+
 /* === GENERAL: hide recommendation junk sitewide === */
 ytd-browse yt-chip-cloud-renderer,
 ytd-feed-nudge-renderer,
